@@ -235,3 +235,10 @@ console.log(`Hi, I'm ${person.Name} and I'm ${person.Age} years old!`);
 ];
 
 produktet.forEach(produkt => console.log(produkt.price));
+
+let totalCost = 0;
+produktet.forEach(produkt => {
+  totalCost += produkt.price * produkt.quantity;
+});
+
+console.log(`Total Cost: ${totalCost}`);
