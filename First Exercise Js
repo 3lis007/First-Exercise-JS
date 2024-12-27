@@ -238,7 +238,7 @@ produktet.forEach(produkt => console.log(produkt.price));
 
 let totalCost = 0;
 produktet.forEach(produkt => {
-  totalCost += produkt.price * produkt.quantity;
+  totalCost += produkt.price;
 });
 
 console.log(`Total Cost: ${totalCost}`);
