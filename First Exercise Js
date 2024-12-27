@@ -1,0 +1,237 @@
+// 1.Write a program that logs "Hello, JavaScript!" to the console.
+console.log("Hello, JavaScript!");
+
+//Declare a variable for each data type: string, number, boolean, undefined, and null. Log them to the console.
+let emri = "Elis";
+console.log(emri);
+
+let mosha = 17;
+console.log(mosha);
+
+entry = true; 
+console.log(entry);
+
+let x;
+console.log(x);
+
+let y = null;
+console.log(y);
+
+//Convert a string to a number and a number to a string. Verify the results using typeof.
+let num = 26;
+let numTostr = String(num);
+console.log(numTostr);
+console.log(typeof numTostr);
+
+let str = "26";
+let strToNum = Number(str);
+console.log(strToNum);
+console.log(typeof strToNum);
+
+//Create a program that takes two numbers as input and performs addition, subtraction, multiplication, and division. Log the results.
+let num1 = prompt("Fut nje numer: ");
+let num2 = prompt("Fut nje numer tjeter: ");
+
+num1 = Number(num1);
+num2 = Number(num2);
+
+    let shuma = num1 + num2;
+    let ndryshesa = num1 - num2;
+    let prodhimi = num1 * num2;
+    let heresi = num1 / num2;
+
+
+console.log(`Mbledhje: ${num1} + ${num2} = ${shuma} `);
+console.log(`Zbritje: ${num1} - ${num2} = ${ndryshesa} `);
+console.log(`Shumezim: ${num1} * ${num2} = ${prodhimi} `);
+console.log(`Pjestim: ${num1} / ${num2} = ${heresi} `);
+
+//Write a program to check if a number is even or odd using the modulo operator (%).
+
+let numri = 7;
+
+if( numri % 2 === 0){
+   console.log("Numri eshte cift");
+
+}
+else{
+
+    console.log("Numri eshte tek");
+}
+
+// Compare two numbers using ==, ===, !=, !==, <, >, <=, and >=. Log the results.
+let nr1 = 20
+let nr2 = 200
+
+console.log(`${nr1} == ${nr2}:`, nr1 == nr2);
+console.log(`${nr1} === ${nr2}:`, nr1 === nr2);
+console.log(`${nr1} != ${nr2}:`, nr1 != nr2);
+console.log(`${nr1} !== ${nr2}:`, nr1 !== nr2);
+console.log(`${nr1} < ${nr2}:`, nr1 < nr2);
+console.log(`${nr1} > ${nr2}:`, nr1 > nr2);
+console.log(`${nr1} <= ${nr2}:`, nr1 <= nr2);
+console.log(`${nr1} >= ${nr2}:`, nr1 >= nr2);
+
+
+/*Write a program that takes a score as input and logs the grade:
+
+90 and above: "A"
+80-89: "B"
+70-79: "C"
+60-69: "D"
+Below 60: "F" */
+
+let num_1 = prompt("Type your score: ")
+num_1 = Number(num_1);
+
+if(num_1 >= 90){
+ console.log("A");
+}
+ else if(num_1 <= 89 && num_1 >= 80){
+    console.log("B")
+ }
+ else if(num_1 <= 79 && num_1 >= 70){
+    console.log("C")
+ }
+ else if(num_1 <= 69 && num_1 >= 60){
+    console.log("D")
+ }
+ else if(num_1 <= 59){
+    console.log("F")
+ }
+
+ // Write a program that logs numbers from 1 to 100. For multiples of 3, log "Fizz"; for multiples of 5, log "Buzz"; and for multiples of both, log "FizzBuzz".
+ for (let i = 1; i <= 100; i++) {
+
+   if (i % 3 === 0 && i % 5 === 0) {
+
+       console.log("FizzBuzz");
+
+   }
+    else if (i % 3 === 0) {
+       console.log("Fizz");
+   }
+    else if (i % 5 === 0) {
+       console.log("Buzz");
+   }
+    else {
+       console.log(i);
+   }
+}
+
+
+ //Write a program that checks if a given password is at least 8 characters long and contains at least one number. Log whether it is valid or not.
+let password = "Mypassword1234";
+let containsNumber = false;
+
+for (let i = 0; i < password.length; i++) {
+    if (!isNaN(password[i]) && password[i] !== " ") {
+        containsNumber = true;
+       break;
+    }
+}
+
+if (password.length >= 8 && containsNumber) {
+    console.log("Password is valid!");
+} else {
+    console.log("Password is not valid!");
+}
+
+
+ //Write a function greet(name) that takes a name as input and logs "Hello, [name]!".
+  function greet(name){
+   console.log(`Hello, ${name}!`);
+
+  }
+  greet("Elis");
+
+//Write a function factorial(n) that calculates the factorial of a number using recursion.
+
+function factorial(n){
+ if(n === 0 || n === 1){
+    return 1;
+ }
+ else{
+    return n * factorial(n - 1);
+ }
+}
+
+result = factorial(6);
+console.log(result);
+
+//Write a function isPalindrome(str) that checks if a string is a palindrome (reads the same backward as forward).
+str = "noon";
+ function isPalindrome(str){
+    let left = 0;
+     let right = str.length - 1;
+      while(left < right){
+          if(str[left] != str[right]){
+             return false;
+       } 
+       left ++; 
+       right --;
+         
+      }
+      return true; 
+    }
+
+   console.log(isPalindrome(str));
+
+//Write a program that takes an array of numbers and returns the sum of all elements.
+
+numrat = [1, 4, 6]; 
+ let shumaNum = 0;
+  for(let numer of numrat){
+    
+   shumaNum = shumaNum + numer
+}
+
+    console.log(shumaNum);
+
+//Write a program that finds the largest number in an array
+num = [ 15, 35 ,2, 80, 0];
+ let largest = num[0];
+
+ for( let i = 0; i < num.length; i++){
+   if(num[i] > largest ){
+       largest = num[i]
+   }
+ }
+  console.log(`Numri me i madh eshte`, largest);
+
+//Write a program that filters even numbers from an array.
+ numrat = [10, 17, 2, 14, 100]
+
+ let NumratCift = numrat.filter( Numrat => Numrat % 2 === 0)
+ console.log(NumratCift)
+
+ //Create an object representing a person with properties like name, age, and hobbies. Log each property to the console.
+
+const person = {}
+
+person.name = "Elis";
+person.age = 17;
+person.hobby = "Basketball";
+
+console.log(person.name);
+console.log(person.age);
+console.log(person.hobby);
+
+//Add a method introduce to the person object that logs "Hi, I'm [name] and I'm [age] years old!".
+
+const person = {
+Name: "Elis",
+Age: 17
+}
+
+console.log(`Hi, I'm ${person.Name} and I'm ${person.Age} years old!`);
+
+/* Create an array of objects representing items in a shopping cart, each with name, price, and quantity.
+ Write a function to calculate the total cost. */
+ let produktet = [
+   { name: "Banana", price: 3, quantity: 2 },
+   { name: "Water", price: 5, quantity: 1 },
+   { name: "Chocolate", price: 10, quantity: 4 }
+];
+
+produktet.forEach(produkt => console.log(produkt.price));
